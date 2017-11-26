@@ -1,0 +1,70 @@
+body {
+
+	font-family: 'Trebuchet MS' , serif;
+        background-color: #000000;
+        overflow:hidden;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+.logo{
+   
+    padding-left: 25px;
+     padding:0 25px 0 2px;
+     color: #db1111;
+}
+
+.logo > a {
+text-decoration: none;
+color: #db1111;
+font-family: 'impact' , serif;
+
+
+}
+.name{
+    padding-top: 150px;
+     text-align: center;
+     font-size: 60px;
+     color: #ffffff;
+     background: none;
+}
+.background{
+    width: 100%;
+    display: block;
+    opacity: 0.5;
+    
+}
+.Lineup{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.longBanner{
+    
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
