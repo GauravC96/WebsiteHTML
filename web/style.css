@@ -10,7 +10,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #000000;
 }
 
 li {
@@ -28,6 +28,7 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: #111;
+    color: #dfb142;
 }
 .logo{
    
@@ -47,8 +48,9 @@ font-family: 'impact' , serif;
     padding-top: 150px;
      text-align: center;
      font-size: 60px;
-     color: #ffffff;
+     color: #dfb142;
      background: none;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
 }
 .background{
     width: 100%;
@@ -71,5 +73,7 @@ font-family: 'impact' , serif;
 .bottombanner{
     width:100%;
     position:fixed;
-    bottom:0px;
+    bottom:0px;  
+    margin: 0;
+    padding: 0;
 }
