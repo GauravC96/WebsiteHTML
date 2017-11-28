@@ -68,3 +68,8 @@ font-family: 'impact' , serif;
   margin-right: auto;
   
 }
+.bottombanner{
+    width:100%;
+    position:fixed;
+    bottom:0px;
+}
