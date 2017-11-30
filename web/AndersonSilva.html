@@ -3,12 +3,14 @@
     <head>
         <title>Anderson Silva</title>
         <meta charset="UTF-8">
-                <link href="normalize.css" rel="stylesheet" type="text/css"/>
+        <link href="normalize.css" rel="stylesheet" type="text/css"/>
         <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>        
 
-    <body background="anderson_silva_beastmode_large.jpg">
-   
+    <body background="anderson_silva_beastmode_large.jpg" onload = "guavaFunc()">
+
+
+
         <div class="navWrapper">
             <ul class="nav">
 
@@ -20,14 +22,27 @@
                 <li><a href="AndersonSilva.html">Anderson Silva</a></li>   
             </ul>
         </div>
-            
+
         <div class ="name">
             <p><b>Anderson Silva</b></p>
+            <p id="text"></p>
         </div>
-        
+
         <div class="bottombanner">
-               <img src="bottombanner2.jpg" alt=""/>
-            </div>
+            <img src="bottombanner2.jpg" alt=""/>
+        </div>
+        <script>
+            var xhttp = new XMLHttpRequest();
+
+            function guavaFunc() {
+                xhttp.open("GET", servlet1, true);
+                xhttp.send(); 
+                document.getElementById("text").innerHTML = text;
+                if (xhttp.readystate === 4 && ranxhttp.status === 200) {
+                    changeContent(xhttp.responseText);
+              
+                }
+        </script>
 
     </body>
 </html>

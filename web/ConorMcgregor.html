@@ -25,9 +25,23 @@
 
         <div class ="name">
               <p><b>Conor MCgregor</b></p>
+              <p id="text"></p>
         </div>
      <div class="bottombanner">
                <img src="bottombanner2.jpg" alt=""/>
             </div>
+         
+     
+     <script>
+            var xhttp = new XMLHttpRequest();
+
+            function guavaFunc() {
+                xhttp.open("GET", servlet1, true);
+                xhttp.send(); 
+                document.getElementById("text").innerHTML = text;
+                if (xhttp.readystate === 4 && ranxhttp.status === 200) {
+                    changeContent(xhttp.responseText);
+             
+        </script>
     </body>
 </html>
