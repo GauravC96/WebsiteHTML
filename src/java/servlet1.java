@@ -24,41 +24,80 @@ import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
 
-
 public class servlet1 extends HttpServlet {
 
     //Wrapper for S3
     S3Wrapper s3Wrapper;
-  
     
-        public void init(){
-        
-    }
+    
 
-
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    
+    protected void processConor(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        s3Wrapper = new S3Wrapper(); 
-        String strong = s3Wrapper.getStringObject("miniprojectufcwebsite", "myConorObj.json");
+        s3Wrapper = new S3Wrapper();
+        String retrievedmyConorObj = s3Wrapper.getdownloadObject("miniprojectufcwebsite", "myConorObj.json");
+        response.setContentType("text/html;charset=UTF-8");
+        
+        try (PrintWriter out = response.getWriter()) {
+           out.println(retrievedmyConorObj);
+
+        }
+    }
+   
+    protected void processJon(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        s3Wrapper = new S3Wrapper();
+        String retrievedmyJonJones = s3Wrapper.getdownloadObject("miniprojectufcwebsite", " myJonObj.json");
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-        out.println(strong);
-                
+           out.println(retrievedmyJonJones);
+
+        }
+    }
+
+    protected void processDemetrious(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        s3Wrapper = new S3Wrapper();
+        String retrievedmyDemetriousObj = s3Wrapper.getdownloadObject("miniprojectufcwebsite", "myDemetriousObj.json");
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            out.println(retrievedmyDemetriousObj);
+
+        }
+    }
+
+    protected void processGeorge(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        s3Wrapper = new S3Wrapper();
+        String retrievemyGeorgeObj = s3Wrapper.getdownloadObject("miniprojectufcwebsite", "myGeorgeObj.json");
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            out.println(retrievemyGeorgeObj);
+
+        }
+    }
+    protected void processAnderson(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        s3Wrapper = new S3Wrapper();
+        String retrievedmyAndersonObj = s3Wrapper.getdownloadObject("miniprojectufcwebsite", "myAndersonObj.json");
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            out.println(retrievedmyAndersonObj);
+
         }
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-        
-       
+        processConor(request, response);
+
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
     }
 
     @Override
@@ -66,5 +105,4 @@ public class servlet1 extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-   
 }

@@ -70,7 +70,7 @@ public class S3Wrapper {
         return false;
     }
 
-    public String getStringObject(String bucketName, String key) {
+    public String getdownloadObject(String bucketName, String key) {
         S3Object object = s3.getObject(new GetObjectRequest(bucketName, key));
         BufferedReader reader = new BufferedReader(new InputStreamReader(object.getObjectContent()));
         //Read the string from the input stream

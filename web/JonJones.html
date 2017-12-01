@@ -3,11 +3,44 @@
     <head>
         <title>Jon Jones</title>
         <meta charset="UTF-8">
-                <link href="normalize.css" rel="stylesheet" type="text/css"/>
+        <link href="normalize.css" rel="stylesheet" type="text/css"/>
         <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>        
-    
-   <body background = "JonJonesBackground.jpg ">
+
+    <body background = "images/JonJonesBackground.jpg " onload = "loadUsingAjax();">
+
+        <script>
+
+            //Create XMLHttpRequest  
+            var xhttp = new XMLHttpRequest();
+
+            //Function replaces context with text
+            function changeContent(text) {
+                document.getElementById("text").innerHTML = text;
+                //document.getElementByID("text").value = document.getElementByID("name").innerHTML
+            }
+
+            //This function is called when XMLHttpRequest function returns
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    changeContent(xhttp.responseText);
+                }
+            }
+
+            //This function sends GET request to TestServlet1. It is linked to button click.
+            function loadUsingAjax() {
+                xhttp.open("GET", "servlet1", true);
+                xhttp.send();
+                // document.getElementById("text").innerHTML = text;
+                if (xhttp.readystate === 4 && ranxhttp.status === 200) {
+                    changeContent(xhttp.responseText);
+                }
+            }
+
+
+
+        </script>
+
         <div class="navWrapper">
             <ul class="nav">
 
@@ -22,10 +55,13 @@
 
 
         <div class ="name">
-              <p><b>Jon Jones</b></p>
+            <p><b>Jon Jones</b></p>
+
         </div>
+        <div class="info"><p id="text"></p></div>
+ 
         <div class="bottombanner">
-               <img src="bottombanner2.jpg" alt=""/>
-            </div>
+            <img src="bottombanner2.jpg" alt=""/>
+        </div>
     </body>
 </html>
