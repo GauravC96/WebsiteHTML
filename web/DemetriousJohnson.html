@@ -7,9 +7,36 @@
         <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>        
 
-    <body background="DemetriousJohnsonBackground.png">
+    <body background="images/DemetriousJohnsonBackground.png" onload = "loadUsingAjax();">
 
+        <script>
 
+            //Create XMLHttpRequest  
+            var xhttp = new XMLHttpRequest();
+
+            //Function replaces context with text
+            function changeContent(text) {
+                document.getElementById("text").innerHTML = text;
+                //document.getElementByID("text").value = document.getElementByID("name").innerHTML
+            }
+
+            //This function is called when XMLHttpRequest function returns
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    changeContent(xhttp.responseText);
+                }
+            }
+
+            //This function sends GET request to TestServlet1. It is linked to button click.
+            function loadUsingAjax() {
+                xhttp.open("GET", "servlet1", true);
+                xhttp.send();
+                document.getElementById("text").innerHTML = text;
+                if (xhttp.readystate === 4 && ranxhttp.status === 200) {
+                    changeContent(xhttp.responseText);
+                }
+            }
+        </script>
         <ul class="nav">
 
             <li><a href="homepage.html">Home</a></li>  
@@ -21,11 +48,13 @@
 
 
         </ul>
+
         <div class ="name">        
-                <p><b>Demetrious Johnson</b></p>
-            </div>
-<div class="bottombanner">
-               <img src="bottombanner2.jpg" alt=""/>
-            </div>
- </body>
+            <p><b>Demetrious Johnson</b></p>
+        </div>
+        <div class="info"><p id="text"></p></div>
+        <div class="bottombanner">
+            <img src="images/bottombanner2.jpg" alt=""/>
+        </div>
+    </body>
 </html>
