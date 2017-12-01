@@ -10,7 +10,7 @@
 
     <body background="images/mcgregorbackground.jpg" onload = "loadUsingAjax();">
 
-        <script>
+       <script>
 
             //Create XMLHttpRequest  
             var xhttp = new XMLHttpRequest();
@@ -24,8 +24,6 @@
             //This function is called when XMLHttpRequest function returns
             xhttp.onreadystatechange = function () {
                 if (xhttp.readyState == 4 && xhttp.status == 200) {
-                    //       var obj = JSON.parse(downloads.retrievedmyConorObj) 
-                    //  document.getElementById("text").innerHTML = obj.BirthDate + ", " + obj.age + ", " + obj.Stance;
                     changeContent(xhttp.responseText);
                 }
             }
@@ -34,11 +32,14 @@
             function loadUsingAjax() {
                 xhttp.open("GET", "servlet1", true);
                 xhttp.send();
-                document.getElementById("text").innerHTML = text;
+                // document.getElementById("text").innerHTML = text;
                 if (xhttp.readystate === 4 && ranxhttp.status === 200) {
                     changeContent(xhttp.responseText);
                 }
             }
+
+
+
         </script>
 
         <div class="navWrapper">
@@ -59,7 +60,9 @@
         <div class ="name">
             <p><b>Conor MCgregor</b></p>
         </div>
-        <div class="info"><p id="text"></p></div> 
+        <div class="info">
+        <p id="text"></p>
+        </div> 
 
         <div class="bottombanner">
             <img src="images/bottombanner2.jpg" alt=""/>

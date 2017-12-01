@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create Object from JSON String</h2>
+
+<div class="name">
+<p id="Stance"></p>
+<p id="WLDSUBKo"></p>
+<p id="Class"></p>
+<p id="Nickname"></p>
+<p id="BirthDate"></p>
+</div>
+
+<script>
+var obj = JSON.parse('{"Stance": "StanceSouthpaw", "WLDSUBKo": "21-3-0 0 7", "Class": "Lightweight", "Nickname": "NicknameThe Notorious", "BirthDate": "Birth DateJuly 14, 1988 (Age: 29)"}');
+document.getElementById("Stance").innerHTML = obj.Stance;
+document.getElementById("WLDSUBKo").innerHTML = obj.WLDSUBKo;
+document.getElementById("Class").innerHTML = obj.Class;
+document.getElementById("Nickname").innerHTML = obj.Nickname;
+document.getElementById("BirthDate").innerHTML = obj.BirthDate;
+
+
+</script>
+
+</body>
+</html>

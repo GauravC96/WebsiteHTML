@@ -35,11 +35,11 @@ public class servlet1 extends HttpServlet {
     protected void processConor(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         s3Wrapper = new S3Wrapper();
-        String retrievedmyConorObj = s3Wrapper.getdownloadObject("miniprojectufcwebsite", "myConorObj.json");
+        downloads.retrievedmyConorObj = s3Wrapper.getdownloadObject("miniprojectufcwebsite", "myConorObj.json");
         response.setContentType("text/html;charset=UTF-8");
         
         try (PrintWriter out = response.getWriter()) {
-           out.println(retrievedmyConorObj);
+           //out.println(retrievedmyConorObj);
 
         }
     }
@@ -91,7 +91,7 @@ public class servlet1 extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processConor(request, response);
-
+        System.out.print(downloads.retrievedmyConorObj);
     }
 
     @Override
