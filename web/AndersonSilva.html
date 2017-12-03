@@ -6,40 +6,34 @@
         <link href="normalize.css" rel="stylesheet" type="text/css"/>
         <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>        
-
     <body background="images/anderson_silva_beastmode_large.jpg" onload = "loadUsingAjax();">
-
-        <script>
-
+  <script>
             //Create XMLHttpRequest  
             var xhttp = new XMLHttpRequest();
-
-            //Function replaces context with text
+ 
             function changeContent(text) {
-                document.getElementById("text").innerHTML = text;
-                //document.getElementByID("text").value = document.getElementByID("name").innerHTML
+                var obj= JSON.parse(text);
+                document.getElementById("Stance").innerHTML = obj.Stance;
+                document.getElementById("WLDSUBKo").innerHTML = obj.WLDSUBKo;
+                document.getElementById("Class").innerHTML = obj.Class;
+                document.getElementById("Nickname").innerHTML = obj.Nickname;
+                document.getElementById("BirthDate").innerHTML = obj.BirthDate;
             }
-
+            
             //This function is called when XMLHttpRequest function returns
             xhttp.onreadystatechange = function () {
                 if (xhttp.readyState == 4 && xhttp.status == 200) {
-                    //       var obj = JSON.parse(downloads.retrievedmyConorObj) 
-                    //  document.getElementById("text").innerHTML = obj.BirthDate + ", " + obj.age + ", " + obj.Stance;
                     changeContent(xhttp.responseText);
                 }
             }
-
-            //This function sends GET request to TestServlet1. It is linked to button click.
+            
+            //This function sends GET request to TestServlet1. It is linked to button click. //linked to window onload? yep here
             function loadUsingAjax() {
                 xhttp.open("GET", "servlet1", true);
                 xhttp.send();
-                document.getElementById("text").innerHTML = text;
-                if (xhttp.readystate === 4 && ranxhttp.status === 200) {
-                    changeContent(xhttp.responseText);
-                }
             }
+            
         </script>
-
         <div class="navWrapper">
             <ul class="nav">
                 <li><a href="homepage.html">Home</a></li>  
@@ -48,15 +42,33 @@
                 <li><a href="DemetriousJohnson.html">Demetrious Johnson</a></li>   
                 <li><a href="GeorgesStPierre.html">Georges St Pierre</a></li>   
                 <li><a href="AndersonSilva.html">Anderson Silva</a></li> 
-                <li><a href="test.html">test</a></li> 
+
             </ul>
         </div>
-
-
-
         <div class ="name">
             <p><b>Anderson Silva</b></p>
         </div>
+  
+        <div class="infoStance">
+         <p><b>Stance</b></p>  <p id="Stance"></p>
+        </div>
+        
+        <div class="infoWLD">
+         <p><b>W-L-D-SUB-Ko</b></p>   <p id="WLDSUBKo"></p>
+        </div>
+        
+        <div class="infoClass" >
+         <p><b>Class</b></p>   <p id="Class"></p>
+        </div>    
+            
+        <div class="infoNickname">   
+        <p><b>Nickname</b></p>     <p id="Nickname"></p>
+        </div>
+            
+        <div class="infoBirthDate"> 
+        <p><b>BirthDate</b></p>     <p id="BirthDate"></p>
+        </div> 
+        
         <div class="info"><p id="text"></p></div>
         <div class="bottombanner">
             <img src="images/bottombanner2.jpg" alt=""/>

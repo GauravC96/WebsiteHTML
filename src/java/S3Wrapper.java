@@ -88,31 +88,71 @@ public class S3Wrapper {
             System.err.println(ex.getMessage());
         }
         return null;
-    }
+    }//one minute , it was fuking working a minute ago fuking java
 
-    public void downloadObject(String bucketName, String key) {
+    public String downloadObject(String bucketName, String key) {
+        String stuff = "";
         System.out.println("Downloading an object");
         S3Object object = s3.getObject(new GetObjectRequest(bucketName, key));
-        System.out.println("Content-Type: " + object.getObjectMetadata().getContentType());
+        //String stuff = ("Content-Type: " + object.getObjectMetadata().getContentType());
         try {
-            displayTextInputStream(object.getObjectContent());
+            stuff = displayTextInputStream(object.getObjectContent());
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
         }
+        return stuff;
+    }
+    
+    public void addStringObject(String bucketName, String key, String string){
+        //Convert string to InputStream
+        byte[] stringBytes = string.getBytes(StandardCharsets.UTF_8);
+        InputStream stream = new ByteArrayInputStream(stringBytes);
+        
+        //Create metadata in which we specify the string length
+        ObjectMetadata metadata = new ObjectMetadata();
+        metadata.setContentLength(stringBytes.length);
+        
+        //Upload InputStream
+        PutObjectRequest request = new PutObjectRequest(bucketName, key, stream, metadata);
+        s3.putObject(request);
+        System.out.println("Added object from string. BucketName: " + bucketName + "; key: " + key + "; String: " + string);
     }
 
-    private static void displayTextInputStream(InputStream input) throws IOException {
+    private static String displayTextInputStream(InputStream input) throws IOException {
+        String line;
         BufferedReader reader = new BufferedReader(new InputStreamReader(input));
         while (true) {
-            String line = reader.readLine();
+            line = reader.readLine();
             if (line == null) {
                 break;
             }
             System.out.println("    " + line);
         }
         System.out.println();
+        return line;
+    }
+    
+     public String getStringObject(String bucketName, String key){
+        S3Object object = s3.getObject(new GetObjectRequest(bucketName, key));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(object.getObjectContent()));
+        //Read the string from the input stream
+        try{
+            String tmpStr = "";
+            while (true) {
+                String line = reader.readLine();
+                if (line == null) 
+                    break;
+                tmpStr += line;
+            }
+            return tmpStr;
+        }
+        catch(Exception ex){
+            System.err.println(ex.getMessage());
+        }
+        return null;
     }
 
+    
 }
 
 

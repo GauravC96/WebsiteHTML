@@ -1,8 +1,8 @@
 body {
 
-	font-family: 'Trebuchet MS' , serif;
-        background-color: #000000;
-        
+    font-family: 'Trebuchet MS' , serif;
+    background-color: #000000;
+
 }
 
 ul {
@@ -32,45 +32,45 @@ li a:hover {
     font-weight: bold
 }
 .logo{
-   
+
     padding-left: 25px;
-     padding:0 25px 0 2px;
-     color: #db1111;
+    padding:0 25px 0 2px;
+    color: #db1111;
 }
 
 .logo > a {
-text-decoration: none;
-color: #db1111;
-font-family: 'impact' , serif;
+    text-decoration: none;
+    color: #db1111;
+    font-family: 'impact' , serif;
 
 
 }
 .name{
     padding-top: 170px;
-     text-align: center;
-     font-size: 60px;
-     color: #dfb142;
-     background: none;
+    text-align: center;
+    font-size: 60px;
+    color: #dfb142;
+    background: none;
     text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
 }
 .background{
     width: 100%;
     display: block;
     opacity: 0.5;
-    
+
 }
 .Lineup{
-  padding-top: 300px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    padding-top: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .longBanner{
-    
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 .bottombanner{
     width:100%;
@@ -80,9 +80,72 @@ font-family: 'impact' , serif;
     padding: 0;
 }
 .info{
-     text-align: center;
-     font-size: 40px;
-     color: #ffffff;
+    text-align: center;
+    font-size: 40px;
+    color: #dfb142;
     text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
-    
+
 }
+.infoStance{ 
+    text-align: center;
+    padding-right: 800px;
+    font-size: 20px;
+    color: #dfb142;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;}
+    
+#Stance {
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;}
+
+.infoWLD{ 
+    text-align: center;
+    padding-right: 800px;
+    font-size: 20px;
+    color: #dfb142;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;}
+#WLDSUBKo {
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;}
+.infoClass{ 
+    text-align: center;
+        padding-right: 800px;
+    font-size: 20px;
+    color: #dfb142;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;}
+#Class {
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;}
+.infoNickname{ 
+    text-align: center;
+    padding-right: 800px;
+    font-size: 20px;
+    color: #dfb142;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;}
+#Nickname {
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;}
+.infoBirthDate{ 
+    text-align: center;
+        padding-right: 800px;
+    font-size: 20px;
+    color: #dfb142;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;}
+#BirthDate {
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;}
+#Qoute {
+    text-align: center;
+    padding-left: 800px;
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;}

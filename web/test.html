@@ -13,7 +13,19 @@
 </div>
 
 <script>
+
+
+//var text = downloads.retrievedmyConorObj; //both of these dont work , it gives nothing 
+//var obj = JSON.parse(downloads.retrievedmyConorObj);    //right oka
+//gis a moment i wanna check somethingon mine cool ill try fixing the servlet k
+
+//so it should be like right but do u get the gobal string to work with JSON parse?, if thats even the way to do it
+//right , lets have a go. i dunno if this will work though so bare with me, coo
+
+
 var obj = JSON.parse('{"Stance": "StanceSouthpaw", "WLDSUBKo": "21-3-0 0 7", "Class": "Lightweight", "Nickname": "NicknameThe Notorious", "BirthDate": "Birth DateJuly 14, 1988 (Age: 29)"}');
+//this is the actual JSON i copied it manually it parses fine right 
+
 document.getElementById("Stance").innerHTML = obj.Stance;
 document.getElementById("WLDSUBKo").innerHTML = obj.WLDSUBKo;
 document.getElementById("Class").innerHTML = obj.Class;
@@ -21,7 +33,7 @@ document.getElementById("Nickname").innerHTML = obj.Nickname;
 document.getElementById("BirthDate").innerHTML = obj.BirthDate;
 
 
-</script>
 
+</script>
 </body>
 </html>
