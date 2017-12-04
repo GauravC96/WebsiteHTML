@@ -6,20 +6,23 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 
-public class servlet1 extends HttpServlet {
+public class servletDemetrious extends HttpServlet {
 
     //Wrapper for S3
     S3Wrapper s3Wrapper;
     
     
-   //@WebServlet(urlPatterns = {"ConorMcgregor"})
-    protected void processConor(HttpServletRequest request, HttpServletResponse response)
+    protected void process(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         s3Wrapper = new S3Wrapper();
-        String retrievedmyConorObj = s3Wrapper.getStringObject("miniprojectufcwebsite", "myConorObj.json");         
+        String retrievedmyDemetriousObj = s3Wrapper.getStringObject("miniprojectufcwebsite", "myDemetriousObj.json");
+//        String retrievemyGeorgeObj = s3Wrapper.getStringObject("miniprojectufcwebsite", "myGeorgeObj.json");
+//        String retrievedmyAndersonObj = s3Wrapper.getStringObject("miniprojectufcwebsite", "myAndersonObj.json");
+
+        
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-           out.println(retrievedmyConorObj);
+           out.println(retrievedmyDemetriousObj);
 
         }
     }
@@ -70,7 +73,7 @@ public class servlet1 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processConor(request, response);
+        process(request, response);
     
     }
     
