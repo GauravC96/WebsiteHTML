@@ -2,7 +2,7 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>servlet1</servlet-name>
-        <servlet-class>servletConor</servlet-class>
+        <servlet-class>servlet1</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Servlet</servlet-name>
@@ -10,19 +10,19 @@
     </servlet>
     <servlet>
         <servlet-name>servlet2</servlet-name>
-        <servlet-class>servletJon</servlet-class>
+        <servlet-class>servlet2</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>servlet3</servlet-name>
-        <servlet-class>servletDemetrious</servlet-class>
+        <servlet-class>servlet3</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>servlet5</servlet-name>
-        <servlet-class>servletAnderson</servlet-class>
+        <servlet-class>servlet5</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>servlet4</servlet-name>
-        <servlet-class>servletGeorge</servlet-class>
+        <servlet-class>servlet4</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>servlet1</servlet-name>

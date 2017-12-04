@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-public class servletAnderson extends HttpServlet {
+public class servlet5 extends HttpServlet {
   //Wrapper for S3
     S3Wrapper s3Wrapper;
     

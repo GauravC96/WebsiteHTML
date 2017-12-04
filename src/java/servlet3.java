@@ -6,25 +6,23 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 
-public class servletJon extends HttpServlet {
+public class servlet3 extends HttpServlet {
 
     //Wrapper for S3
     S3Wrapper s3Wrapper;
     
     
-   //@WebServlet(urlPatterns = {"ConorMcgregor"})
     protected void process(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         s3Wrapper = new S3Wrapper();
-        String retrievedmyJonJones = s3Wrapper.getStringObject("miniprojectufcwebsite", "myJonObj.json");
-//        String retrievedmyDemetriousObj = s3Wrapper.getStringObject("miniprojectufcwebsite", "myDemetriousObj.json");
+        String retrievedmyDemetriousObj = s3Wrapper.getStringObject("miniprojectufcwebsite", "myDemetriousObj.json");
 //        String retrievemyGeorgeObj = s3Wrapper.getStringObject("miniprojectufcwebsite", "myGeorgeObj.json");
 //        String retrievedmyAndersonObj = s3Wrapper.getStringObject("miniprojectufcwebsite", "myAndersonObj.json");
 
         
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-           out.println(retrievedmyJonJones);
+           out.println(retrievedmyDemetriousObj);
 
         }
     }

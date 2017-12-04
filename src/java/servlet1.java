@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 
-public class servletConor extends HttpServlet {
+public class servlet1 extends HttpServlet {
 
     //Wrapper for S3
     S3Wrapper s3Wrapper;
@@ -17,10 +17,7 @@ public class servletConor extends HttpServlet {
             throws ServletException, IOException {
         s3Wrapper = new S3Wrapper();
         String retrievedmyConorObj = s3Wrapper.getStringObject("miniprojectufcwebsite", "myConorObj.json");         
-//        String retrievedmyJonJones = s3Wrapper.getStringObject("miniprojectufcwebsite", " myJonObj.json");
-//        String retrievedmyDemetriousObj = s3Wrapper.getStringObject("miniprojectufcwebsite", "myDemetriousObj.json");
-//        String retrievemyGeorgeObj = s3Wrapper.getStringObject("miniprojectufcwebsite", "myGeorgeObj.json");
-//        String retrievedmyAndersonObj = s3Wrapper.getStringObject("miniprojectufcwebsite", "myAndersonObj.json");
+
 
         
         response.setContentType("text/html;charset=UTF-8");

@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 
-public class servletGeorge extends HttpServlet {
+public class servlet4 extends HttpServlet {
 
     //Wrapper for S3
     S3Wrapper s3Wrapper;
