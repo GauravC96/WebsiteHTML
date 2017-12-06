@@ -15,7 +15,7 @@
             function changeContent(text) {
                 var obj= JSON.parse(text);
                 document.getElementById("Stance").innerHTML = obj.Stance;
-                document.getElementById("WLDSUBKo").innerHTML = obj.WLDSUBKo;
+                document.getElementById("WLDSUBKo").innerHTML = obj.    WLDSUBKo;
                 document.getElementById("Class").innerHTML = obj.Class;
                 document.getElementById("Nickname").innerHTML = obj.Nickname;
                 document.getElementById("BirthDate").innerHTML = obj.BirthDate;
@@ -30,7 +30,7 @@
             
             //This function sends GET request to TestServlet1. It is linked to button click. //linked to window onload? yep here
             function loadUsingAjax() {
-                xhttp.open("GET", "servlet1", true);
+                xhttp.open("GET", "servlet1?conor", true);
                 xhttp.send();
             }
             
