@@ -12,7 +12,6 @@ public class servlet1 extends HttpServlet {
     //Wrapper for S3
     S3Wrapper s3Wrapper;
 
-    //@WebServlet(urlPatterns = {"ConorMcgregor"})
     protected void processConor(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         s3Wrapper = new S3Wrapper();

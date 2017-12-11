@@ -14,6 +14,9 @@
  
             function changeContent(text) {
                 var obj= JSON.parse(text);
+                
+                //Replaces the content of elements with the contents of the json
+
                 document.getElementById("Stance").innerHTML = obj.Stance;
                 document.getElementById("WLDSUBKo").innerHTML = obj.    WLDSUBKo;
                 document.getElementById("Class").innerHTML = obj.Class;
@@ -36,6 +39,7 @@
             
         </script>
         <div class="navWrapper">
+             //Navbar list
             <ul class="nav">
                 <li><a href="homepage.html">Home</a></li>  
                 <li><a href="ConorMcgregor.html">Conor Mcgregor</a></li>  
